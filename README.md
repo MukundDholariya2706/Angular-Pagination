@@ -35,5 +35,5 @@ npm install bootstrap
 
 https://www.npmjs.com/package/ngx-pagination
 
-npm i ngx-pagination
+npm install ngx-pagination --save
 

@@ -1,3 +1,25 @@
 <h1>Angular NGX-Pagination</h1>
-<hr>
+<hr />
 <Button class="btn btn-success" (click)="getUsers()">Get Users</Button>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Email</th>
+      <th>Picture</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of data | paginate: config">
+  <td>{{user.name.first}}</td>
+  <td>{{user.gender}}</td>
+  <td>{{user.email}}</td>
+  <td><img src="{{user.picture.medium}}" alt="user image"></td>
+
+  </tr>
+  </tbody>
+</table>
+<div>
+  <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+</div>

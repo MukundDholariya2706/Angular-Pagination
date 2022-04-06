@@ -10,8 +10,7 @@ export class EmployeeFilterPipe implements PipeTransform {
     }
 
     return data.filter(
-      (data) =>
-        !data.gender.toLowerCase().indexOf(searchText.toLowerCase())
+      (data) => !data.gender.toLowerCase().indexOf(searchText.toLowerCase())
     );
   }
 }

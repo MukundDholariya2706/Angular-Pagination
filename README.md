@@ -41,4 +41,14 @@ npm install ngx-pagination --save
 
 https://stackoverflow.com/questions/58406104/how-filter-array-with-different-parameters-using-pipes
 
+## ascending & descending order
 
+npm install ngx-order-pipe
+
+## fa-fa-icon with bootstrap
+
+npm install font-awesome --save
+
+angular.js -> "styles": [
+ "node_modules/font-awesome/css/font-awesome.css",
+]

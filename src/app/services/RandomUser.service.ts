@@ -8,10 +8,8 @@ import { Observable } from 'rxjs';
 export class RandomUserService {
   constructor(private http: HttpClient) {}
 
-  getData():Observable<any>{
-    const url = "https://randomuser.me/api/?results=20"
-
-
-    return this.http.get<any>(url)
+  getData(): Observable<any> {
+    const url = 'https://randomuser.me/api/?results=10';
+    return this.http.get<any>(url);
   }
 }

@@ -1,28 +1,44 @@
 <h1>Angular NGX-Pagination</h1>
 <hr />
 <Button class="btn btn-success" (click)="getUsers()">Get Users</Button>
-
+<hr />
 <div class="search-hero">
-  <input class="from-control" type="text" name="search" [(ngModel)]="searchText">
+  <input
+    class="from-control"
+    type="text"
+    name="search"
+    [(ngModel)]="searchText"
+    placeholder="search by gender"
+  />
 </div>
 
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>Name</th>
+      <th (click)="sort('name.first')">
+        Name&nbsp; <i class="fa fa-sort"></i>
+      </th>
       <th>Gender</th>
+      <th>DOB</th>
       <th>Email</th>
       <th>Picture</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let user of data | employeeFilter: searchText  | paginate: config ">
-  <td>{{user.name.first}}</td>
-  <td>{{user.gender| titlecase}}</td>
-  <td>{{ user.email }}</td>
-  <td><img src="{{user.picture.medium}}" alt="user image"></td>
-
-  </tr>
+    <tr
+      *ngFor="
+        let user of data
+          | orderBy: key:reverse
+          | employeeFilter: searchText
+          | paginate: config
+      "
+    >
+      <td>{{ user.name.first }}</td>
+      <td>{{ user.gender | titlecase }}</td>
+      <td>{{ user.dob.date | date: "dd/MM/yyyy" }}</td>
+      <td>{{ user.email }}</td>
+      <td><img src="{{ user.picture.medium }}" alt="user image" /></td>
+    </tr>
   </tbody>
 </table>
 <div>

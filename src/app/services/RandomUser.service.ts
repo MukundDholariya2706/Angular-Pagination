@@ -9,7 +9,7 @@ export class RandomUserService {
   constructor(private http: HttpClient) {}
 
   getData():Observable<any>{
-    const url = "https://randomuser.me/api/?results=50"
+    const url = "https://randomuser.me/api/?results=20"
 
 
     return this.http.get<any>(url)

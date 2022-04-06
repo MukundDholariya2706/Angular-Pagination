@@ -13,6 +13,7 @@ export class AppComponent {
   totalRecords!: string
   page: Number = 1
   config: any;
+  searchText: any;
 
   constructor(private randomUser: RandomUserService){
     this.data = new Array<any>();

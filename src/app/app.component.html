@@ -41,6 +41,7 @@
     </tr>
   </tbody>
 </table>
-<div>
+
+<div *ngIf="totalRecords>0">
   <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
 </div>

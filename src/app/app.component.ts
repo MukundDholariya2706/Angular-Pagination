@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'pagination';
 
   data!: Array<any>;
-  totalRecords!: string;
+  totalRecords!: number;
   page: Number = 1;
   config: any;
   searchText: any;

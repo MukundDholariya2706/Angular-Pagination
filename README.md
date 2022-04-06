@@ -1,4 +1,4 @@
-# Pagination
+# Pagination & Searching
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.3.
 
@@ -36,4 +36,9 @@ npm install bootstrap
 https://www.npmjs.com/package/ngx-pagination
 
 npm install ngx-pagination --save
+
+## Searching using custom pipe
+
+https://stackoverflow.com/questions/58406104/how-filter-array-with-different-parameters-using-pipes
+
 
